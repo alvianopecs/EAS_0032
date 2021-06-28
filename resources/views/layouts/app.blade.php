@@ -51,6 +51,9 @@
                                 </li>
                             @endif
                         @else
+                        <form action="/cari" method="GET">
+                        <input type="text" class="form-control" name="cari" placeholder="Cari Barang .." value="{{ old('cari') }}">
+                        </form>
                         <li class="nav-item">
                                 <?php
                                  $pesanan_utama = \App\Pesanan::where('user_id', Auth::user()->id)->where('status',0)->first();
